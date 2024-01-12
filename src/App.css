@@ -1,0 +1,73 @@
+
+.main{
+  width: 100%;
+ min-height: 100vh;
+  background: linear-gradient(rgb(247, 63, 247),rgb(10, 10, 71));
+  padding: 50px;
+  margin:30px;
+}
+span{
+  color: red;
+  padding: 10px;
+  margin:10px;
+  cursor: pointer;
+}
+.btn{
+  margin-top: 5px;
+  padding: 20px;
+  font-size: 18px;
+  color: red;
+  font-family: "Lucida Console";
+  background-color:rgb(248, 211, 248);
+  
+
+}
+.Todo-input{
+  padding: 20px;
+  font-family: "Lucida Console";
+  font-size: 15px;
+}
+
+li{
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+  font-family: "Lucida Console";
+  width: 75%;
+}
+ h1{
+ margin-left: 460px;
+  color: white;
+  padding: 10px 32px ;
+  font-family: "Lucida Console";
+  text-decoration: underline;
+ }
+ picture{
+  padding: 20px;
+  background-color: white;
+ }
+
+ 
+ img{
+  width: 80%;
+  height: 100%;
+  padding-left: 90px;
+
+ }
+ p{
+  margin: 5px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 90px;
+  color: white;
+font-size: 20px;
+  font-family: "Lucida Console";
+
+ }
+.align_data{
+  display: flex;
+}
+
+div{
+  color: white;
+}
