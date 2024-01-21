@@ -18,6 +18,7 @@ function Home(){
           chatBox.appendChild(botMessage);
         }, 500);
         document.getElementById("userInput").value = "";
+        chatBox.scrollTop=chatBox.scrollHeight;
     }
 }
 
