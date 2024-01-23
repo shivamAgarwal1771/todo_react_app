@@ -5,14 +5,14 @@ import Home from './components/chat'
 import Login from './components/login'
 
 import Navigation from './components/navigation';
-import { RouterProvider, BrowserRouter } from 'react-router-dom';
+import { RouterProvider, HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename='/todo_react_app'>
+    <HashRouter>
     <Navigation/>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
