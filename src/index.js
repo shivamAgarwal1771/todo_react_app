@@ -10,7 +10,7 @@ import { RouterProvider, BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/todo_react_app'>
     <Navigation/>
     </BrowserRouter>
   </React.StrictMode>

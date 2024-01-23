@@ -40,11 +40,7 @@ function Chat(){
 
 
   return (
-   <>
-  <div class="chat-container">
-  <div class="chat-header">
-      <h2>Chatbot</h2>
-  </div>
+<>
   <div id="chatBox">
       <div class="bot">Hello! How can I help you today?</div>
   </div>
@@ -52,8 +48,7 @@ function Chat(){
       <input type="text" id="userInput" placeholder="Type your message here"/>
       <button onClick={()=>sendMessage()}>Send</button>
   </div>
-</div>
-</>
+  </>
   );
 }
 
