@@ -1,9 +1,8 @@
-import './App.css';
+import '../css/App.css';
 import {Link,NavLink} from 'react-router-dom'
 import { Route,Routes } from 'react-router-dom';
 import React, { useState } from 'react'
-import todo from "./todo.jpg"
-import Home from "./Home"
+import Home from "./chat"
 var count=0;
 var dat=0;
 const input_array = [];
@@ -65,7 +64,6 @@ function App() {
           <div>
             <p>“Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely.”</p>
             <div className='picture'>
-              <img src={todo} />
             </div>
           </div>
         </div>

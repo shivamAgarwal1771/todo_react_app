@@ -1,8 +1,15 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import './Home.css'
-let count=0;
-function Home(){
+import '../css/chat.css'
+var json_data=true;
+const obj= {
+  "heyy":"hello",
+  "i need help":"How can i help you",
+  "i am user":"nice to meet you",
+  "who are you":"i am your personal chat bot",
+  "who is aman":"he is your best friend"
+}
+function Chat(){
   function sendMessage() {
     const userInput = document.getElementById("userInput").value;
     if (userInput != "") {
@@ -14,11 +21,19 @@ function Home(){
         setTimeout(function () {
           var botMessage = document.createElement("div");
           botMessage.className = "bot";
+          for (var key in obj){
+          if(key == userInput)
+          {
+            json_data=false;
+            botMessage.textContent = obj[key];
+          }
+        }
+        if(json_data)
           botMessage.textContent = "I got your message: "+ userInput;
           chatBox.appendChild(botMessage);
         }, 500);
         document.getElementById("userInput").value = "";
-        chatBox.scrollTop=chatBox.scrollHeight;
+        json_data=true;
     }
 }
 
@@ -42,4 +57,4 @@ function Home(){
   );
 }
 
-export default Home;
+export default Chat;
