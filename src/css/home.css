@@ -13,21 +13,21 @@
     background-color: black;
 }
 
-ul{
+.emoji_list{
     display: flex;
 }
 
-li{
+.emoji{
     position: relative;
     border-radius: 50%;
+    width: 80px;
     background-color: rgb(67, 65, 65);
-    color:white;
     font-size: 40px;
     transition: 0.4s;
 }
 
-li:hover{
-        border: 5px solid rgb(219, 67, 227);
+.emoji:hover{
+        border: 2px solid rgb(219, 67, 227);
         box-shadow: 0 0 22px rgb(219, 67, 227) ;
     
 }

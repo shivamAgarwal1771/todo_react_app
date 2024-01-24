@@ -3,9 +3,6 @@ import {Link,NavLink} from 'react-router-dom'
 import { Route,Routes } from 'react-router-dom';
 import React, { useState } from 'react'
 import Home from "./chat"
-var count=0;
-var dat=0;
-const input_array = [];
 function App() {
   const [val, setVal] = useState("")
   function handle() {
@@ -16,10 +13,7 @@ function App() {
     if (val === "")
       alert("enter something")
     else {
-      input_array.push(val);
-       dat=count+1;
-      list.innerHTML = input_array[count]
-      count=count+1
+      list.innerHTML =val
       inputBox.appendChild(list)
       delete_data.innerHTML = "DELETE"
       list.appendChild(delete_data)
@@ -28,22 +22,19 @@ function App() {
     }
     delete_data.addEventListener("click", function (e) {
       e.target.parentElement.remove();
-      count=count-1;
     })
     edit_data.addEventListener("click", function (e) {
-      
     let a=document.createElement("input")
+    a.className="input_todo"
     let b=document.createElement("button")
     b.innerHTML="Edit"
     list.appendChild(a)
    list.appendChild(b)
     b.addEventListener("click",function(e){
-    
-    // input_array[dat]=a.value;
-    for(var i=0;i<=count;i++)
-    {
-      console.log(input_array[i] + i)
-    }
+   let new_data=document.getElementsByClassName('input_todo')[0].value;
+   list.innerHTML=new_data
+      list.appendChild(delete_data)
+      list.appendChild(edit_data)
     })
     })
     setVal("")
@@ -61,13 +52,8 @@ function App() {
               <ul id='data'></ul>
             </div>
           </div>
-          <div>
-            <p>“Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely.”</p>
-            <div className='picture'>
-            </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

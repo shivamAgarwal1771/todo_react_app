@@ -6,12 +6,19 @@
   padding: 50px;
   margin:30px;
 }
-span{
+.input_todo{
+  color:white;
+  background-color: black;
+  border-radius: 10px;
+  height: 40px;
+}
+ span{
   color: red;
   padding: 10px;
   margin:10px;
   cursor: pointer;
 }
+
 .btn{
   margin-top: 5px;
   padding: 20px;
@@ -30,10 +37,10 @@ span{
 
 li{
   margin: 10px;
-  background-color: white;
+  background-color:white;
   padding: 20px;
   font-family: "Lucida Console";
-  width: 75%;
+  width: 400px;
 }
  h1{
  margin-left: 460px;
@@ -54,16 +61,7 @@ li{
   padding-left: 90px;
 
  }
- p{
-  margin: 5px;
-  padding-bottom: 30px;
-  padding-right: 10px;
-  padding-left: 90px;
-  color: white;
-font-size: 20px;
-  font-family: "Lucida Console";
-
- }
 .align_data{
   display: flex;
+  flex-direction: column;
 }
