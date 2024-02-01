@@ -9,64 +9,74 @@ const obj= {
   "who are you":"i am your personal chat bot",
   "who is aman":"he is your best friend"
 }
+
 function Chat(){
   const [data,setData]=useState("")
-  function sendMessage() {
-    let date=  new Date().toLocaleTimeString('en-US', { hour12: false, 
-      hour: "numeric", 
-      minute: "numeric"});
-    const userInput = document.getElementById("userInput").value;
-    if (userInput != "") {
-      var chatBox = document.getElementById("chatBox");
-      var avatar = document.createElement("span");
-      avatar.innerHTML="SHIVAM";
-      var newMessage = document.createElement("div");
-      newMessage.className = "user";
-      chatBox.appendChild(avatar)
-      newMessage.innerHTML =userInput +`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${date}`;
-      chatBox.appendChild(newMessage);
-        setTimeout(function () {
-          var bot_avatar=document.createElement("span");
-          bot_avatar.innerHTML="BOT"
-          var botMessage = document.createElement("div");
-          botMessage.className = "bot";
-          chatBox.appendChild(bot_avatar);
-          for (var key in obj){
-          if(key == userInput)
-          {
-            json_data=false;
-            botMessage.innerHTML = obj[key] +`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${date}`;
-          }
+  let date=  new Date().toLocaleTimeString('en-US', { hour12: false, 
+          hour: "numeric", 
+          minute: "numeric"});
+   function sendMessage() {
+        if (data != "") {
+          var msg_date= document.createElement("span")
+          msg_date.innerHTML=date;
+          var chatbox = document.getElementsByClassName("chatbox");
+          var newMessage = document.createElement("div");
+          var blue= document.createElement("div")
+          blue.className="avatar_blue"
+          blue.innerHTML="U"
+          newMessage.appendChild(blue)
+          var newData = document.createElement("p");
+          newMessage.className = "chat outgoing";
+          newData.innerHTML =data;
+          newMessage.appendChild(newData);
+          newMessage.appendChild(msg_date)
+          chatbox[0].appendChild(newMessage)
+            setTimeout(function () {
+              var m_date= document.createElement("span")
+              m_date.innerHTML=date;
+              var botMessage = document.createElement("div");
+              var botData = document.createElement("p");
+              var green= document.createElement("div")
+              green.className="avatar_green"
+              green.innerHTML="B"
+              botMessage.appendChild(green)
+              botMessage.className = "chat incoming";
+              botData.innerHTML="get it"
+              botMessage.appendChild(botData)
+              botMessage.appendChild(m_date)
+              chatbox[0].appendChild(botMessage);
+            }, 500);
+            document.getElementsByClassName("data")[0].value = "";
         }
-        if(json_data)
-          botMessage.innerHTML = "I got your message: "+ userInput +`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${date}`;
-          chatBox.appendChild(botMessage);
-        }, 500);
-        document.getElementById("userInput").value = "";
-        json_data=true;
-    }
-}
-  return (
-<div className='main-div'>
-  <div className='container'>
-    <div className='top-part'>
-      <p style={{color:"white", padding:50}}>SIRI CHAT BOT</p>
-    </div>
-
-    <div id="chatBox">
-      <div class="bot">Hello! How can I help you today?</div>
-  </div>
- 
-  <div class="chat-input">
-      <input type="text" id="userInput" placeholder="TYPE"/>
-      <button onClick={()=>sendMessage()}>Send</button>
-  </div>
-
-  </div>
-
+      }
+  return(
+  <div className='chatbot'>
+   <header>
+    <h2>Chatbot</h2>
+   </header>
+   <div className='chatbox'>
+<div className='chat incoming'>
+  <div className='avatar_green'>B</div>
+<p>Hi, How can i help you?</p>
+<span className='date'>{date}</span>
+</div>
+<div className='chat outgoing'>
+<div className='avatar_blue'>U</div>
+<p>Hi, i need help urgently</p>
+<span className='date'>{date}</span>
+</div>
+   </div>
+   <div className='input'>
+    <textarea className='data' placeholder='Enter your message'></textarea>
+    <span className="input_span"onClick={()=>
+    {
+      setData(document.getElementsByClassName("data")[0].value);
+      sendMessage()}}>SEND</span>
+   </div>
   </div>
   );
 }
+
 
 
 export default Chat;
