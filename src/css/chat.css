@@ -20,6 +20,11 @@
   font-size: 20px;
   text-align: left;
 }
+#chatBox{
+  overflow-y:scroll;
+  height:360px;
+  width:375px;
+}
 #chatBox span{
   display: flex;
   font-size: 20px;
@@ -38,7 +43,6 @@
   border-radius: 10px;
   margin-bottom: 8px;
   margin-left: 8px;
-  margin-top: 319px;
   margin-right: 10px;
   border-top: 1px solid #ccc;
 }
@@ -56,7 +60,8 @@ button{
   background: white;
   border-color: black;
   color:black;
-  padding-right: 110px;
+  width: 200px;
+  padding-left: 10px;
   margin-right: 8px;
   margin-top: 31px;
   margin-bottom:30px;
@@ -77,12 +82,11 @@ button{
   width: 390px;
   border: 3px solid black;
   border-radius: 20px;
-  overflow-y:scroll;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-part{
-  margin-right: 6px;
-  margin-left: 6px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: black;
 }

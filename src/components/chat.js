@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useEffect, useState } from 'react';
 import '../css/chat.css'
 var json_data=true;
@@ -52,9 +52,11 @@ function Chat(){
     <div className='top-part'>
       <p style={{color:"white", padding:50}}>SIRI CHAT BOT</p>
     </div>
+
     <div id="chatBox">
       <div class="bot">Hello! How can I help you today?</div>
   </div>
+ 
   <div class="chat-input">
       <input type="text" id="userInput" placeholder="TYPE"/>
       <button onClick={()=>sendMessage()}>Send</button>
