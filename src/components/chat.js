@@ -1,15 +1,8 @@
 import React, { useRef } from 'react'
 import { useEffect, useState } from 'react';
 import '../css/chat.css'
-var json_data=true;
-const obj= {
-  "heyy":"hello",
-  "i need help":"How can i help you",
-  "i am user":"nice to meet you",
-  "who are you":"i am your personal chat bot",
-  "who is aman":"he is your best friend"
-}
-
+var count=0;
+const arr=["Heyy, How are you?", "I am here to help you","i can't get you","Can you repeat the query please","can you explain it properly","Can't get you"];
 function Chat(){
   const [data,setData]=useState("")
   let date=  new Date().toLocaleTimeString('en-US', { hour12: false, 
@@ -19,7 +12,7 @@ function Chat(){
         if (data != "") {
           var msg_date= document.createElement("span")
           msg_date.innerHTML=date;
-          var chatbox = document.getElementsByClassName("chatbox");
+          var chatbox = document.getElementsByClassName("chatbox")[0];
           var newMessage = document.createElement("div");
           var blue= document.createElement("div")
           blue.className="avatar_blue"
@@ -30,7 +23,7 @@ function Chat(){
           newData.innerHTML =data;
           newMessage.appendChild(newData);
           newMessage.appendChild(msg_date)
-          chatbox[0].appendChild(newMessage)
+          chatbox.appendChild(newMessage)
             setTimeout(function () {
               var m_date= document.createElement("span")
               m_date.innerHTML=date;
@@ -41,10 +34,15 @@ function Chat(){
               green.innerHTML="B"
               botMessage.appendChild(green)
               botMessage.className = "chat incoming";
-              botData.innerHTML="get it"
+              botData.innerHTML=arr[count]
               botMessage.appendChild(botData)
               botMessage.appendChild(m_date)
-              chatbox[0].appendChild(botMessage);
+              chatbox.appendChild(botMessage);
+              count=count+1;
+              if(count==5)
+              {
+                count=0;
+              }
             }, 500);
             document.getElementsByClassName("data")[0].value = "";
         }
