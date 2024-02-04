@@ -1,0 +1,89 @@
+.header{
+    height: 55px;
+    width: 100%;
+    background-color: black;
+}
+
+.header .span{
+    color: white;
+}
+
+.header div{
+    color: red;
+}
+
+.head{
+    display: flex;
+}
+.header .head input{
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+}
+.toggle{
+    background-color: rgb(92, 104, 240);
+    border-radius: 30px;
+    margin-top: 17px;
+    margin-left: 580px;
+    width: 37px;
+    height:20px
+}
+.toggle-button{
+    background-color:white;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.head .buttons{
+    background-color: rgb(116, 211, 116);
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.head .symbol{
+    margin-top: 20.5px;
+    margin-left: 22px;
+    background-color: rgb(116, 211, 116);
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+}
+.drop_id .drop {
+    height: 30px;
+    width: 110px;
+    align-items: start;
+    justify-content: start;
+}
+.drop_id .dropdown_id{
+    border: none;
+    background-color: black;
+    color: white;
+    margin-top: 9.5px;
+    margin-left: 3px;
+    padding: 0 0 0 0;
+    font-size: 11px;
+}
+ .menu{
+    font-size: 11px;
+   justify-content: center top;
+   background-color:black;
+   padding: 16px;
+}
+.profile{
+    display: flex;
+}
+.profile .avatar{
+    margin-left: 8px;
+    background-color: white;
+    padding: 6px;
+    padding-left: 8px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+

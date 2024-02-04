@@ -9,6 +9,7 @@ function Home() {
     <ul className='emoji_list'>
         <Link to="/chat"><li className='emoji'><i class="fa-brands fa-rocketchat"></i></li></Link>
         <Link to="/todo"><li  className='emoji'><i class="fa-solid fa-pencil"></i></li></Link>
+        <Link to="/assist"><li  className='emoji'><i class="fa-solid fa-pen"></i></li></Link>
     </ul>
     </div>
     </>
