@@ -13,11 +13,11 @@ function Assist_comp() {
       </div>
       <div className='filter'>
       Filter by
-    <div><BasicExample name="Filter by" subname="experience"/></div>
+    <div><BasicExample name="Filter by" subname="experience" bgs="white"/></div>
       </div>
       <div className='sort'>
       Sort by
-    <div><BasicExample name="Sort by" subname="experience"/></div>
+    <div><BasicExample name="Sort by" subname="experience" bgs="white"/></div>
       </div>
      </div>
      <Dymanic_msg/>
