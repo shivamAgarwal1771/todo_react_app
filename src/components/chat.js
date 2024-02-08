@@ -33,8 +33,8 @@ function Chat() {
             return (
               <div className='chat incoming'>
               <div className='column'>
-                <div className='avatar_green'>{msg.bot==true?"R":"S"}</div>
-                <div><p className='user_name'>{msg.bot==true?"Ratnesh Chandra":"Shivam Agarwal"}</p>
+                <div className='avatar_green'>{msg.bot==true?"A":"S"}</div>
+                <div><p className='user_name'>{msg.bot==true?"Aman Gupta":"Shivam Agarwal"}</p>
                   <p>{msg.text}</p>
                 </div>
               </div>

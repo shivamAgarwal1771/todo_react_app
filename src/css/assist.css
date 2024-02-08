@@ -20,20 +20,20 @@
     margin-top: 10px;
 }
 .toggle{
-    background-color: rgb(92, 104, 240);
+    background-color:rgb(30, 168, 222);
     border-radius: 30px;
     margin-top: 17px;
     margin-left: 500px;
     width: 37px;
     height:20px
 }
-.toggle-button{
+/* .toggle-button{
     background-color:white;
     border-radius: 30px;
     cursor: pointer;
     width: 20px;
     height: 20px;
-}
+} */
 .head .buttons{
     background-color: rgb(116, 211, 116);
     color: white;
