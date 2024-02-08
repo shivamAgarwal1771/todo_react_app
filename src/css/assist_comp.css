@@ -7,6 +7,10 @@
 }
 .main-ui{
     display: flex;
+    flex-direction: column;
+}
+.style{
+    display: flex;
 }
  .search_bar{
     margin-top: 2px;

@@ -2,9 +2,19 @@ import React from 'react'
 import '../css/assist_comp.css'
 import Chat from "./chat"
 function Dymanic_msg() {
+  let date = new Date().toLocaleTimeString([], {
+    hour: '2-digit',
+    hour12: true,
+    minute: '2-digit'
+  });
+  const arr=["Can you guide me for my query","Heyy give me a brief of the app","Nice to meet you how can i help you"]
   return (
+    < div className="style">
     <div className='main-ui'>
-    <div className='container_data'>
+      {arr.map((arr,i) => {
+        return( 
+          <>
+           <div className='container_data'>
     <div className="container_style">
      <div className='text'>
         SA 
@@ -13,14 +23,19 @@ function Dymanic_msg() {
          Recommendation
      </div>
      <div className='time'>
-         7:43 pm
+       {date}
      </div>
     </div>
     <div className='msg'>
-     Heyy Nice To Meet You How Can I Help You.
+    {arr}
     </div>
+    </div>
+    </>
+        )
+      })
+}
   </div>
-  <div>
+     <div>
 <Chat/>
   </div>
   </div>

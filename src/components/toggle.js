@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import BasicExample from './dropdown'
 import styled from 'styled-components'
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import '../css/assist.css'
 export default function Toggle() {
-  const [state, setState] = useState(false);
+    const [state, setState] = useState(true);
   const Buttons = styled.button`
     margin-left:${state == true ? 17: 0};
     `;
