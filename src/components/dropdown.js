@@ -5,17 +5,19 @@ import styled from 'styled-components'
 function BasicExample(props) {
   const [open, setOpen] = useState(false)
   var colors=props.bgs;
+  var col=props.colors;
   var [data, setData] = useState(props.name)
   var [text, setText] = useState(props.subname);
   const Title = styled.select`
 background-color: ${colors};
+color:${col}
   padding:6px
 `;
   return (
     <div className='drop_id'>
-    <Title className='assist-css' style={{backgroundColor:colors}}>
-    <option>{data}</option>
-    <option>{text}</option>
+    <Title className='assist-css' style={{color:col}}>
+    <option style={{color:col, backgroundColor:colors}}>{data}</option>
+    <option style={{color:col, backgroundColor:colors}}>{text}</option>
     </Title>
     </div>
   );
