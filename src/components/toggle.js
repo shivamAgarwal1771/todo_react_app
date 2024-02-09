@@ -13,10 +13,10 @@ export default function Toggle() {
             <div className='toggle'><Switch ></Switch></div>
             <div><button className='buttons'>Available</button></div>
             <div><div className='symbol'></div></div>
-            <div className='dropdowns'><BasicExample name="Ready for Calls" subname="Ready for Text" bgs="black" /></div>
+            <div className='dropdowns'><BasicExample name="Ready for Calls" subname="Ready for Text" bgs="white" /></div>
             <div className='profile'>
               <div className='avatar'><i class="fa-solid fa-user"></i></div>
-              <div className='user-name'><BasicExample name="Ratnesh Chandra" subname="Shivam Agarwal" bgs="black" /></div>
+              <div className='user-name'><BasicExample name="Ratnesh Chandra" subname="Shivam Agarwal" bgs="white"  /></div>
             </div>
           </div>
         </header>

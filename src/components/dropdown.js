@@ -7,33 +7,42 @@ function BasicExample(props) {
   var colors=props.bgs;
   var [data, setData] = useState(props.name)
   var [text, setText] = useState(props.subname);
-  const Title = styled.div`
+  const Title = styled.select`
 background-color: ${colors};
   padding:6px
 `;
   return (
     <div className='drop_id'>
-      <Title className='assist-css' onClick={(e) => { setOpen(!open) }}>
-        {data}
-      </Title>
-      {open &&
-        <ul>
-          <li className='menu' onClick={() => {
-            setOpen(false)
-            if (data == props.name) {
-              setData(text)
-              setText(props.name)
-            }
-            else {
-              setData(text)
-              setText(props.subname)
-            }
-          }}>{text}</li>
-        </ul>
-      }
-
+    <Title className='assist-css' style={{backgroundColor:colors}}>
+    <option>{data}</option>
+    <option>{text}</option>
+    </Title>
     </div>
   );
 }
 
 export default BasicExample;
+
+
+
+
+// <div className='drop_id'>
+// <Title className='assist-css' onClick={(e) => { setOpen(!open) }}>
+// </Title>
+// {open &&
+//   <ul>
+//     <li className='menu' onClick={() => {
+//       setOpen(false)
+//       if (data == props.name) {
+//         setData(text)
+//         setText(props.name)
+//       }
+//       else {
+//         setData(text)
+//         setText(props.subname)
+//       }
+//     }}>{text}</li>
+//   </ul>
+// }
+
+// </div>
