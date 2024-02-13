@@ -10,7 +10,7 @@ export default function Toggle() {
         <header className='header'>
           <div className='head'>
             <span>EXL</span><span className='span'>Smart system agent</span>
-            <div className='toggle'><Switch ></Switch></div>
+            <div className='toggle'><Switch style={{backgroundColor:"blue", width:24}} ></Switch></div>
             <div><button className='buttons'>Available</button></div>
             <div><div className='symbol'></div></div>
             <div className='dropdowns'><BasicExample name="Ready for Calls" subname="Ready for Text" bgs="black" colors="white" /></div>

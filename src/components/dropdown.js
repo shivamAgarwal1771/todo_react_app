@@ -1,6 +1,7 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../css/assist.css';
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components'
 function BasicExample(props) {
   const [open, setOpen] = useState(false)
